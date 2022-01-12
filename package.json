@@ -8,5 +8,9 @@
   "license": "MIT",
   "dependencies": {
     "co-compose": "^7.0.0"
-  }
+  },
+  "keywords": [
+      "web",
+      "server"
+  ]
 }
