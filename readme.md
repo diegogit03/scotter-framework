@@ -13,7 +13,7 @@ npm i @scott/server
 This is a simple example:
 
 ```js
-const scott = require('@scott/server');
+const scott = require('scott-server');
 
 const server = scott();
 
