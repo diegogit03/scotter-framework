@@ -1,9 +1,9 @@
 {
-  "name": "scott-server",
+  "name": "@scotterjs/server",
   "version": "1.0.0",
   "description": "A library for server setup",
   "main": "index.js",
-  "repository": "https://github.com/diegogit03/scott-server",
+  "repository": "https://github.com/diegogit03/scotter-server",
   "author": "Diego Henrique de Oliveira Madero",
   "license": "MIT",
   "dependencies": {

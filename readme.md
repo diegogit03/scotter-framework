@@ -1,11 +1,11 @@
-# @scott/server
+# @scotterjs/server
 
 This is a library for create a simple web server base.
 
 ## Installation
 
 ```shel
-npm i @scott/server
+npm i @scotterjs/server
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm i @scott/server
 This is a simple example:
 
 ```js
-const scott = require('scott-server');
+const scott = require('@scotterjs/server');
 
 const server = scott();
 
@@ -24,6 +24,8 @@ server.use(async (ctx, next) => {
 
 server.use(async ({ response }) => {
     console.log('Executing second middleware!');
-    response.end('Hi!')
-})
+    response.end('Hi!');
+});
+
+server.listen(3000);
 ```
