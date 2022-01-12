@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/diegogit03/scott-server",
   "author": "Diego Henrique de Oliveira Madero",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "co-compose": "^7.0.0"
+  }
 }
