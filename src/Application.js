@@ -7,11 +7,12 @@ class Application {
 
     constructor () {
         this._middlewareStore = new Middleware();
+        this._middlewareList = [];
         this._server = http.createServer(this.callback());
     }
 
     use (middleware) {
-        this._middlewareStore.register([middleware]);
+        this._middlewareList.push(middleware);
     }
 
     listen (port, callback = () => {}) {
@@ -19,7 +20,10 @@ class Application {
     }
 
     callback () {
-        return async (req, res) => await this._middlewareStore.runner().run([new HttpContext(req, res)]);
+        return async (req, res) => {
+            this._middlewareStore.register(this._middlewareList);
+            await this._middlewareStore.runner().run([new HttpContext(req, res)]);
+        }
     }
 
 }
