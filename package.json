@@ -6,11 +6,9 @@
   "repository": "https://github.com/diegogit03/scotter-server",
   "author": "Diego Henrique de Oliveira Madero",
   "license": "MIT",
-  "dependencies": {
-    "co-compose": "^7.0.0"
-  },
+  "dependencies": {},
   "keywords": [
-      "web",
-      "server"
+    "web",
+    "server"
   ]
 }
