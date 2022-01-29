@@ -10,5 +10,8 @@
   "keywords": [
     "web",
     "server"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
