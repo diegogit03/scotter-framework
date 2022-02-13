@@ -24,7 +24,12 @@ class MiddlewareStore {
     async _next () {
         const fn = this._store[this._index++];
 
-        if (fn.prototype.handle) {
+        if (!fn || this._index-1 == this._store.length) {
+            this._index = 0;
+            return;
+        }
+
+        if (fn.prototype) {
             const instance = new fn();
             await instance.handle(...this._params);
             return;
