@@ -17,9 +17,10 @@
     "access": "public"
   },
   "devDependencies": {
-    "jest-mock": "^27.5.1",
     "@japa/expect": "^1.1.1",
     "@japa/runner": "^1.2.0",
-    "@japa/spec-reporter": "^1.1.7"
+    "@japa/spec-reporter": "^1.1.7",
+    "jest-mock": "^27.5.1",
+    "supertest": "^6.2.2"
   }
 }
