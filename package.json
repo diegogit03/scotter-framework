@@ -6,6 +6,9 @@
   "repository": "https://github.com/diegogit03/scotter-server",
   "author": "Diego Henrique de Oliveira Madero",
   "license": "MIT",
+  "scripts": {
+    "test": "node bin/test.js"
+  },
   "keywords": [
     "web",
     "server"
