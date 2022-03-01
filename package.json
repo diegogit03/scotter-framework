@@ -1,17 +1,24 @@
 {
   "name": "@scotterjs/server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library for server setup",
   "main": "index.js",
   "repository": "https://github.com/diegogit03/scotter-server",
   "author": "Diego Henrique de Oliveira Madero",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "jest-mock": "^27.5.1"
+  },
   "keywords": [
     "web",
     "server"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@japa/expect": "^1.1.1",
+    "@japa/runner": "^1.2.0",
+    "@japa/spec-reporter": "^1.1.7"
   }
 }
