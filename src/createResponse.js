@@ -20,7 +20,7 @@ const createResponse = response => {
 
     response.status = function (status) {
         if (typeof status !== 'number') {
-            return new Error('Invalid status type');
+            throw new Error('Invalid status type');
         }
 
         this.statusCode = status;
