@@ -6,9 +6,6 @@
   "repository": "https://github.com/diegogit03/scotter-server",
   "author": "Diego Henrique de Oliveira Madero",
   "license": "MIT",
-  "dependencies": {
-    "jest-mock": "^27.5.1"
-  },
   "keywords": [
     "web",
     "server"
@@ -17,6 +14,7 @@
     "access": "public"
   },
   "devDependencies": {
+    "jest-mock": "^27.5.1",
     "@japa/expect": "^1.1.1",
     "@japa/runner": "^1.2.0",
     "@japa/spec-reporter": "^1.1.7"
