@@ -24,12 +24,12 @@ class MiddlewareStore {
     async _next () {
         const fn = this._store[this._index++];
 
-        if (!fn || this._index-1 == this._store.length) {
+        if (!fn || this._index+2 === this._store.length) {
             this._index = 0;
             return;
         }
 
-        if (fn.prototype) {
+        if (fn.prototype && fn.prototype.handle) {
             const instance = new fn();
             await instance.handle(...this._params);
             return;
@@ -46,7 +46,6 @@ class MiddlewareStore {
         this._params = [param, this._next.bind(this)];
         this._next()
     }
-
 }
 
 module.exports = MiddlewareStore;
