@@ -1,7 +1,11 @@
 {
   "name": "@scotterjs/server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A library for server setup",
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
   "main": "index.js",
   "repository": "https://github.com/diegogit03/scotter-server",
   "author": "Diego Henrique de Oliveira Madero",
