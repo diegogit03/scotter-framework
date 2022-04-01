@@ -10,7 +10,7 @@ interface HttpContext {
 }
 
 interface ClassMiddleware {
-    handle(ctx: HttpContext, next: CallableFunction): any;
+    handle (ctx: HttpContext, next: CallableFunction): any;
 }
 
 type Middleware = (ctx: HttpContext, next: CallableFunction) => any | ClassMiddleware;
@@ -21,8 +21,9 @@ interface MiddlewareStore {
 }
 
 interface Application {
-    callback(): (req: IncomingMessage, res: ServerResponse) => Promise<void>;
-    listen(port: number, callback?: CallableFunction):
+    callback (): (req: IncomingMessage, res: ServerResponse) => Promise<void>;
+    listen (port: number, callback?: CallableFunction): void;
+    use (middleware: Middleware): void;
 }
 
 type createApplicationFactory = (middlewareStore: MiddlewareStore) => Application;
