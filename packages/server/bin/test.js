@@ -18,7 +18,16 @@ const { processCliArgs, configure, run } = require('@japa/runner')
 configure({
   ...processCliArgs(process.argv.slice(2)),
   ...{
-    files: ['tests/**/*.spec.js'],
+    suites: [
+        {
+            name: 'unit',
+            files: ['tests/unit/**/*.spec.ts']
+        },
+        {
+            name: 'functional',
+            files: ['tests/functional/**/*.spec.ts'],
+        }
+    ],
     plugins: [expect()],
     reporters: [specReporter()],
     importer: (filePath) => require(filePath),
