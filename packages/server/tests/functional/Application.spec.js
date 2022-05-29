@@ -14,6 +14,8 @@ test.group('Application', group => {
         });
 
         app.listen(3000);
+
+        return () => app._server.close();
     });
 
     test('It should return 200 status and return "test" string', async ({ expect }) => {
@@ -22,10 +24,6 @@ test.group('Application', group => {
             .expect(200);
 
         expect(text).toBe('test');
-    }).timeout(10000);
-
-    group.teardown(async () => {
-        app._server.close();
-    });
+    })
 
 });
