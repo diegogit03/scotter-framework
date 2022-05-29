@@ -10,8 +10,8 @@ A simple base server for our framework.
 
 # To-do
 
-[ ] - Write an Ioc container package
-[ ] - Write core of framework
-[ ] - Improve server package
-[ ] - Add test integration in framework
-[ ] - Write a cli
+- [ ] Write an Ioc container package
+- [ ] Write core of framework
+- [ ] Improve server package
+- [ ] Add test integration in framework
+- [ ] Write a cli
