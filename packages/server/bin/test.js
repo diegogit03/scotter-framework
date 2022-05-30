@@ -21,13 +21,14 @@ configure({
     suites: [
         {
             name: 'unit',
-            files: ['tests/unit/**/*.spec.ts']
+            files: ['tests/unit/**/*.spec.js']
         },
         {
             name: 'functional',
-            files: ['tests/functional/**/*.spec.ts'],
+            files: ['tests/functional/**/*.spec.js'],
         }
     ],
+    files: ['tests/**/*.spec.js'],
     plugins: [expect()],
     reporters: [specReporter()],
     importer: (filePath) => require(filePath),
