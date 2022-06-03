@@ -7,7 +7,7 @@
   ],
   "version": "0.1.1",
   "description": "a library for create a base container in scotterjs applications.",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": "https://github.com/diegogit03/scotter-framework",
   "author": "Diego Henrique de Oliveira Madero",
   "license": "MIT",
