@@ -1,4 +1,5 @@
 import { bind } from './types';
+import { BindNotFound } from './Exceptions';
 
 export class Container {
 
@@ -21,7 +22,7 @@ export class Container {
         const bind = this.store.find(bindItem => bindItem.namespace === namespace);
 
         if (bind === undefined) {
-            throw new Error('Bind not found');
+            throw new BindNotFound(namespace);
         }
 
         return !bind.fake
@@ -36,7 +37,7 @@ export class Container {
         const bindIndex = this.store.findIndex(bindItem => bindItem.namespace === namespace);
 
         if (bindIndex === undefined) {
-            throw new Error('Bind not found');
+            throw new BindNotFound(namespace);
         }
 
         this.store[bindIndex].fake = callback;

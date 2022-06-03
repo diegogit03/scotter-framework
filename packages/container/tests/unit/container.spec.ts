@@ -1,6 +1,7 @@
 import { test } from '@japa/runner';
 
 import { Container } from '../../index';
+import { BindNotFound } from '../../src/Exceptions';
 
 test.group('Container', () => {
     test('It should bind a class', ({ expect }) => {
@@ -16,7 +17,7 @@ test.group('Container', () => {
     test('It should throw an Error when bind not Exists', ({ expect }) => {
         const container = new Container();
 
-        expect(() => container.use('Namespace')).toThrowError();
+        expect(() => container.use('Namespace')).toThrowError(BindNotFound);
     });
 
     test('It should fake a bind', ({ expect }) => {

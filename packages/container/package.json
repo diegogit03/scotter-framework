@@ -1,6 +1,11 @@
 {
   "name": "@scotterjs/container",
-  "version": "1.0.0",
+  "files": [
+    "build/src",
+    "build/index.js",
+    "build/index.d.ts"
+  ],
+  "version": "0.1.1",
   "description": "a library for create a base container in scotterjs applications.",
   "main": "index.js",
   "repository": "https://github.com/diegogit03/scotter-framework",
