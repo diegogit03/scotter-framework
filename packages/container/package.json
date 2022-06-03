@@ -7,7 +7,8 @@
   "author": "Diego Henrique de Oliveira Madero",
   "license": "MIT",
   "scripts": {
-    "test": "node -r ts-node/register bin/test.ts"
+    "test": "node -r ts-node/register bin/test.ts",
+    "build": "tsc"
   },
   "keywords": [
     "container",
