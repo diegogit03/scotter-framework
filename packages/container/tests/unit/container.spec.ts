@@ -34,4 +34,18 @@ test.group('Container', () => {
         expect(noFakedBind).toBeInstanceOf(Test)
         expect(fakedBind).toBe(null)
     });
+
+    test('It should restore a fake bind', ({ expect }) => {
+        class Test {}
+
+        const container = new Container();
+
+        container.bind('Namespace', () => new Test());
+        container.fake('Namespace', () => null);
+        container.restore('Namespace');
+
+        const restoredBind = container.use('Namespace');
+
+        expect(restoredBind).toBeInstanceOf(Test);
+    });
 });

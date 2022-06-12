@@ -43,4 +43,16 @@ export class Container {
         this.store[bindIndex].fake = callback;
     }
 
+    public restore (
+        namespace: string
+    ): void {
+        const bindIndex = this.store.findIndex(bindItem => bindItem.namespace === namespace);
+
+        if (bindIndex === undefined) {
+            throw new BindNotFound(namespace);
+        }
+
+        this.store[bindIndex].fake = null;
+    }
+
 }

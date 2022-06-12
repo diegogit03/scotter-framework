@@ -1,5 +1,3 @@
-import { Container } from './Container';
-
 export class BindNotFound extends Error {
 
     constructor (
