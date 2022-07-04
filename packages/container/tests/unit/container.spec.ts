@@ -7,7 +7,7 @@ test.group('Container', () => {
     test('It should bind a class', ({ expect }) => {
         class Test {}
 
-        const container = new Container();
+        const container = new Container()
 
         container.bind('Namespace', () => new Test());
 
