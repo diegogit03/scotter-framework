@@ -1,0 +1,33 @@
+{
+  "name": "@scotterjs/container",
+  "files": [
+    "build/src",
+    "build/index.js",
+    "build/index.d.ts"
+  ],
+  "version": "0.1.1",
+  "description": "a library for create a base container in scotterjs applications.",
+  "main": "build/index.js",
+  "repository": "https://github.com/diegogit03/scotter-framework",
+  "author": "Diego Henrique de Oliveira Madero",
+  "license": "MIT",
+  "scripts": {
+    "test": "node -r ts-node/register bin/test.ts",
+    "build": "tsc"
+  },
+  "keywords": [
+    "container",
+    "scotterjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@japa/expect": "^1.1.1",
+    "@japa/runner": "^1.2.0",
+    "@japa/spec-reporter": "^1.1.7",
+    "jest-mock": "^27.5.1",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.6.3"
+  }
+}
